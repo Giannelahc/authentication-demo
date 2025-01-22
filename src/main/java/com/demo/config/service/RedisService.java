@@ -14,7 +14,7 @@ public class RedisService {
     private RedisTemplate<String, Object> redisTemplate;
 
     public void saveObject(String key, User value) {
-        redisTemplate.opsForValue().set(key, value, Duration.ofMinutes(1));  // Guarda el objeto con la clave dada
+        redisTemplate.opsForValue().set(key, value, Duration.ofMinutes(5));  // Guarda el objeto con la clave dada
     }
 
     public User getObject(String key) {
