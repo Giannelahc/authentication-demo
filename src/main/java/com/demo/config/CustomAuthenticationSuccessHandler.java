@@ -32,7 +32,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
             redisService.saveObject(userId, userService.saveOrUpdateUser(userId, email, name));
             System.out.println(redisService.getObject(userId));
         }
-        response.sendRedirect("http://localhost:4000/"/* "/api/user"*/);
+        response.sendRedirect("http://localhost:3000/"/* "/api/user"*/);
     }
 }
 
